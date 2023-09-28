@@ -1,0 +1,10 @@
+@import "src/theme/variables.scss";
+
+.board {
+  display: flex;
+  color: black;
+  flex: 1;
+  @include themify($themes) {
+    background: themed("board-background");
+  }
+}

@@ -1,0 +1,9 @@
+@import "theme/variables.scss";
+
+.general-container {
+  background-color: $white;
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  display: flex;
+}
