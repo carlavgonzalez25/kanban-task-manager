@@ -1,6 +1,7 @@
 import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
 import Board from "../Board/Board";
 import Menu from "../Menu/Menu";
+import Sidebar from "../Sidebar/Sidebar";
 import { useContext } from "react";
 
 const Layout: React.FC = () => {
@@ -10,7 +11,9 @@ const Layout: React.FC = () => {
 
   return (
     <div className={`theme-${theme} general-container`}>
-      <Menu />
+      <Sidebar>
+        <Menu />
+      </Sidebar>
       <Board />
     </div>
   );

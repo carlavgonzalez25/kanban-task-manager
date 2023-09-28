@@ -11,7 +11,6 @@ const Menu: React.FC = () => {
 
   const handleSwitchThemes = () => {
     dispatch({ type: TOGGLE_THEME });
-    console.log("el handle se ejecuta");
   };
 
   return (

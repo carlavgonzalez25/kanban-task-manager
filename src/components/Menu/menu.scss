@@ -1,16 +1,8 @@
 @import "src/theme/variables.scss";
 
 .menu {
-  @include themify($themes) {
-    background: themed("sidebar-background");
-    color: themed("sidebar-text-color");
-    border-right: 1px solid themed("sidebar-border-color");
-  }
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-  min-width: 250px;
-  padding-right: 1rem;
 
   .menu__title {
     margin-bottom: 1rem;
@@ -21,12 +13,18 @@
     padding: 0.875rem;
     border: 0px;
     background-color: unset;
+    width: 230px;
 
     &:hover,
     &:focus {
       background-color: $primary;
       border-radius: 0 50px 50px 0;
       outline: unset;
+      h4 {
+        @include themify($themes) {
+          color: themed("sidebar-text-color-hover");
+        }
+      }
     }
 
     .menu__item__icon {
@@ -38,12 +36,6 @@
       @include themify($themes) {
         color: themed("sidebar-text-color");
       }
-      &:hover,
-      &:focus {
-        @include themify($themes) {
-          color: themed("sidebar-text-color-hover");
-        }
-      }
     }
   }
   .menu__toggle-container {
@@ -53,6 +45,8 @@
     height: 15px;
     padding: 1rem;
     border-radius: 6px;
+    margin-top: auto;
+    margin-bottom: 1rem;
     @include themify($themes) {
       background-color: themed("sidebar-toggle-background");
     }
