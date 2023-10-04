@@ -2,18 +2,23 @@ import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
 import Board from "../Board/Board";
 import Menu from "../Menu/Menu";
 import Sidebar from "../Sidebar/Sidebar";
-import { useContext } from "react";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import { useContext, useState } from "react";
 
 const Layout: React.FC = () => {
   const {
     state: { theme },
   } = useContext(ThemeContext);
 
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <div className={`theme-${theme} general-container`}>
       <Sidebar>
         <Menu />
       </Sidebar>
+      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <button onClick={() => setIsOpen(true)}> open </button>
       <Board />
     </div>
   );

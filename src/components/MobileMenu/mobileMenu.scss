@@ -1,0 +1,14 @@
+@import "../../theme/variables.scss";
+
+.mobile-menu {
+  width: 280px;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
