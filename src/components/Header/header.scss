@@ -1,0 +1,61 @@
+@import "src/theme/variables.scss";
+
+.header {
+  display: flex;
+  height: 81px;
+
+  @include themify($themes) {
+    background: themed("sidebar-background");
+    color: themed("sidebar-text-color");
+  }
+
+  .header__logo-container {
+    width: 250px;
+    margin-left: 1rem;
+    align-self: center;
+    height: 100%;
+    display: flex;
+
+    @include themify($themes) {
+      border-right: 1px solid themed("sidebar-border-color");
+    }
+
+    .header__logo {
+      width: auto;
+      height: 25px;
+      align-self: center;
+    }
+
+    .header__logo--light {
+      @include themify($themes) {
+        display: themed("logo-dark");
+      }
+      @media screen and (max-width: 1024px) {
+        @include themify($themes) {
+          display: themed("display-none");
+        }
+      }
+    }
+    .header__logo--dark {
+      @include themify($themes) {
+        display: themed("logo-light");
+      }
+      @media screen and (max-width: 1024px) {
+        @include themify($themes) {
+          display: themed("display-none");
+        }
+      }
+    }
+
+    .header__logo--mobile {
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+  .header__title {
+    align-self: center;
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+}

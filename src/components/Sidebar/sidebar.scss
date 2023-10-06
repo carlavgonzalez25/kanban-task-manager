@@ -8,10 +8,10 @@
   }
   display: flex;
   flex-direction: column;
-  min-width: 250px;
+  width: 250px;
   padding-right: 1rem;
   justify-content: space-between;
-  height: 100%;
+  height: calc(100% - 81px);
   position: absolute;
   left: 0;
   transition: left 0.5s ease-in-out;

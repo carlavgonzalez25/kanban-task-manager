@@ -20,6 +20,9 @@ $themes: (
     sidebar-toggle-background: $grey-100,
     sidebar-border-color: $grey-200,
     board-background: $grey-100,
+    logo-dark: none,
+    logo-light: block,
+    display-none: none,
   ),
   dark: (
     sidebar-background: $grey-500,
@@ -29,6 +32,9 @@ $themes: (
     sidebar-toggle-background: $grey-600,
     sidebar-border-color: $grey-400,
     board-background: $grey-600,
+    logo-dark: block,
+    logo-light: none,
+    display-none: none,
   ),
 );
 
