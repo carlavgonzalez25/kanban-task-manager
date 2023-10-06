@@ -1,8 +1,19 @@
 @import "src/theme/variables.scss";
 
-.layout {
+.general-container {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  display: flex;
+
   @include themify($themes) {
     background: themed("sidebar-background");
     color: themed("sidebar-text-color");
+  }
+
+  .mobile-menu__button {
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
   }
 }

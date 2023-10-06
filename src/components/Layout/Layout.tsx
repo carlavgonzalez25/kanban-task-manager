@@ -4,6 +4,7 @@ import Menu from "../Menu/Menu";
 import Sidebar from "../Sidebar/Sidebar";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { useContext, useState } from "react";
+import "./layout.scss";
 
 const Layout: React.FC = () => {
   const {
@@ -18,7 +19,9 @@ const Layout: React.FC = () => {
         <Menu />
       </Sidebar>
       <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-      <button onClick={() => setIsOpen(true)}> open </button>
+      <button className="mobile-menu__button" onClick={() => setIsOpen(true)}>
+        open
+      </button>
       <Board />
     </div>
   );
